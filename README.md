@@ -14,7 +14,6 @@ PHP tabanlı **Metin2 oyun sunucusu** web sitesi ve item shop sistemi.
 - [Yapılandırma](#yapılandırma)
 - [Proje Yapısı](#proje-yapısı)
   - [Web\_Clasic](#web_clasic)
-  - [iShop\_Clasic](#ishop_clasic)
 - [API Modülleri](#api-modülleri)
 - [Güvenlik](#güvenlik)
 - [Geliştirici Araçları](#geliştirici-araçları)
