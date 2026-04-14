@@ -1,6 +1,6 @@
 # irisPanel — Web Clasic
 
-PHP tabanlı **Metin2 oyun sunucusu** web sitesi sistemi.  
+PHP tabanlı **oyun sunucusu** web sitesi sistemi.  
 [irisPanel](https://irispanel.com) altyapısı ile çalışır; tüm veri işlemleri SQL'e doğrudan bağlantı olmadan merkezi bir **REST API** üzerinden yürütülür.
 
 ---
@@ -234,3 +234,13 @@ Her iki proje de `/developer/` adresinde bir geliştirici paneli içerir.
 ```php
 const ErrorLogWrite = true;   // true: logla | false: loglama
 ```
+
+**Site Görsel:**
+<img width="1301" height="1231" alt="Screenshot_1" src="https://github.com/user-attachments/assets/e9aaf7a0-adcf-405d-8ee7-cdce5291df47" />
+
+
+
+
+
+
+
