@@ -91,6 +91,7 @@
     const GuildList_CacheTime  = 300; // Lonca sıralaması
     const Statistics_CacheTime =  10; // Anlık istatistikler (çok sık güncellenir)
     const Events_CacheTime     = 300; // Etkinlik listesi
+    const BansList_CacheTime   = 300; // Yasaklı oyuncu listesi
 
     // Hata loglamasını aktif eder. Production'da true bırakın; debug sonrası false yapın.
     const ErrorLogWrite = true;

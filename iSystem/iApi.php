@@ -20,6 +20,7 @@
 //   iApi_Events.php   — Etkinlikler (dil filtrelemeli)
 //   iApi_Downloads.php — İndirme linkleri
 //   iApi_Ticket.php   — Destek talep sistemi
+//   iApi_BansList.php — Yasaklı oyuncu listesi
 //   iApi_UserAgent.php — Tarayıcı saat dilimi ve referans kodu yönetimi
 //   iFunctions.php    — Yardımcı fonksiyonlar (IP, dil, session, cache)
 // ============================================================
@@ -33,6 +34,7 @@ require("iApi_News.php");
 require("iApi_Events.php");
 require("iApi_Downloads.php");
 require("iApi_Ticket.php");
+require("iApi_BansList.php");
 require("iApi_UserAgent.php");
 if (session_status() !== PHP_SESSION_ACTIVE) { session_start(); }
 
@@ -47,6 +49,7 @@ class irisApi {
     public static Events_Class     $Events;
     public static Downloads_Class  $Downloads;
     public static Ticket_Class     $Ticket;
+    public static BansList_Class   $BansList;
 
     // Tüm modülleri başlatır. Bu dosya include edildiğinde otomatik çağrılır.
     public static function init(): void {
@@ -58,6 +61,7 @@ class irisApi {
         self::$Events     = new Events_Class();
         self::$Downloads  = new Downloads_Class();
         self::$Ticket     = new Ticket_Class();
+        self::$BansList   = new BansList_Class();
     }
 }
 
