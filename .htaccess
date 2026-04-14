@@ -1,0 +1,43 @@
+RewriteEngine On
+# HTTPS değilse HTTPS'ye yönlendir
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# www'li ise www'suz hale yönlendir
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+# non-static dosyalar için cache sürelerini ayarla
+<filesMatch "\.(jpg|jpeg|png|gif|css|js)$">
+  Header set Cache-Control "max-age=2592000, public"
+</filesMatch>
+
+# iris sayfaları için yönlendirme
+RewriteRule ^developer(/.*)?$ iSystem/iDeveloper.php [L,QSA]
+RewriteRule ^Developer(/.*)?$ iSystem/iDeveloper.php [L,QSA]
+RewriteRule ^localapi(/.*)?$ iSystem/iPage_System.php [L,QSA]
+RewriteRule ^LocalApi(/.*)?$ iSystem/iPage_System.php [L,QSA]
+RewriteRule ^timezoneset(/.*)?$ index.php?s=timezoneset [L,QSA]
+
+# SEO için sayfaları yönlendirme
+RewriteRule ^home(/.*)?$ index.php?s=home [L]
+RewriteRule ^media(/.*)?$ index.php?s=media [L]
+RewriteRule ^howto(/.*)?$ index.php?s=howto [L]
+RewriteRule ^tutorials(/.*)?$ index.php?s=tutorials [L]
+RewriteRule ^thegame(/.*)?$ index.php?s=thegame [L]
+RewriteRule ^characterclasses(/.*)?$ index.php?s=characterclasses [L]
+RewriteRule ^empires(/.*)?$ index.php?s=empires [L]
+RewriteRule ^login(/.*)?$ index.php?s=login [L,QSA]
+RewriteRule ^profil(/.*)?$ index.php?s=profil [L]
+RewriteRule ^pwchange(/.*)?$ index.php?s=pwchange [L]
+RewriteRule ^characters(/.*)?$ index.php?s=characters [L]
+RewriteRule ^accrecover(/.*)?$ index.php?s=accrecover [L]
+RewriteRule ^logout(/.*)?$ index.php?s=logout [L]
+RewriteRule ^register(/.*)?$ index.php?s=register [L,QSA]
+RewriteRule ^registerlog(/.*)?$ index.php?s=registerlog [L,QSA]
+RewriteRule ^singup(/.*)?$ index.php?s=register [L,QSA]
+RewriteRule ^forgotpassword(/.*)?$ index.php?s=forgotpassword [L,QSA]
+RewriteRule ^passwordlost(/.*)?$ index.php?s=passwordlost [L,QSA]
+RewriteRule ^download$ index.php?s=download [L]
+RewriteRule ^rankplayer$ index.php?s=rankings [L]
+RewriteRule ^rankguild$ index.php?s=guildrank [L]

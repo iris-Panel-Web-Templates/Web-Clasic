@@ -1,0 +1,911 @@
+﻿@charset "utf-8";
+/* Plugins CSS */
+/*###############################
+########VALIDATION PLUGIN########
+#################################*/
+
+.formError {
+	position:absolute;
+	top:300px;
+	left:300px;
+	display:block;
+	padding:0 0 0 15px;
+	text-align:left;
+	width:260px;
+	z-index:5000;
+
+}
+#debugMode {
+	background:#000;
+	position:fixed;
+	width:100%;
+	height:200px;
+	top:0;
+	left:0;
+	overflow:scroll;
+	opacity:0.8;
+	display:block;
+	padding:10px;
+	color:#fff;
+	font-size:14px;
+	z-index:100000;
+}
+.ajaxSubmit {
+	padding:20px;
+	background:#55ea55;
+	border:1px solid #999;
+	display:none
+}
+#register #pwInfo,
+.formError .formErrorContent {
+	background:url("../img/tooltip-bg.png") repeat-x scroll 0 0 #B9A16E;
+	border:1px solid #60430a;
+	box-shadow: 4px 4px 4px #000000;
+	-moz-box-shadow: 4px 4px 4px #000000;
+	-webkit-box-shadow: 4px 4px 4px #000000;
+	color:#111111;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	min-height:30px;
+	width:100%;
+}
+* html .formError .formErrorContent { height:auto; height:30px;}
+
+#registerForm .valid-check {
+	background:url("../img/ok.gif") no-repeat scroll 0 0 transparent;
+	height:20px;
+	margin:0 0 0 10px;
+	position:absolute;
+	right:-25px;
+	top:22px;
+	width:20px;
+}
+
+#registerForm .tacformError {left:760px !important;}
+
+.greenPopup .formErrorContent { 
+	width:235px;
+}
+.blackPopup .formErrorContent {
+	background:#393939;
+	color:#FFF;
+}
+.formError .formErrorArrow {
+	background:url("../img/tooltip-arrow.gif") no-repeat scroll 0 0 transparent;
+	height:20px;
+	left:5px;
+	position:absolute;
+	top:5px;
+	width:15px;
+	z-index:5001;
+}
+.formError .formErrorArrowBottom {
+	top:0;
+	margin:-6px;
+}
+.formError .formErrorArrow div {
+	font-size:0px;
+	height:1px;
+	margin:0 auto;
+	line-height:0px;
+	font-size:0px;
+	display:block;
+}
+.formError .formErrorArrowBottom div {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.blackPopup .formErrorArrow div {
+	background:#393939;
+	color:#FFF;
+}
+.formError .icon {
+	background:url(../img/warning_16.gif) no-repeat scroll 5px 2px;
+	padding:4px 10px 4px 25px;
+}
+.valid .icon {background:url(../img/info.html) no-repeat scroll 5px 2px;}
+.valid .formErrorContent,
+.ajaxed .formErrorContent {background:#028e09 url(../img/tooltip-bg-green.png) repeat-x;}
+.valid .formErrorArrow,
+.ajaxed .formErrorArrow {background:url(../img/tooltip-arrow-green.gif) no-repeat;}
+.tacformError {margin-left:250px !important;}
+
+/*###############################
+######## SECUREPWD BAR  ########
+#################################*/
+#securePwd {
+	overflow:hidden;
+	position:relative;
+}
+.invalid-char {height:15px;}
+#validChar {
+	color:#AF1B03;
+	font-weight:bold;
+}
+#page .valid-icon {
+	background:url("../img/valid-icon.gif") no-repeat scroll 0 0 transparent;
+	display:inline;
+	float:left;
+	height:16px;
+	margin:0 0 5px 10px;
+	width:16px;
+}
+
+#page .invalid {background-position:0 -16px;}
+#securePwd .securePwdBarBox {
+	float:left;
+	margin:5px 10px 10px;
+	width:180px;
+}
+#securePwd .securePwdBarBox, #securePwd #securePwdBar { /* has IE-fix */
+	background:transparent url(../img/secure-pwd-bar.gif) no-repeat 0 -13px;
+	font-size:1px;
+	height:13px;
+	
+}
+#securePwd #securePwdBar {float:left; background-position:0 0; width:0px;}
+#pwdWarning {
+	float:right;
+	display:none;
+	margin-top: 32px;
+	padding: 0;
+	position: relative;
+	width:180px;
+}
+#pwdWarning label {font-weight:700}
+
+#securePwd p {
+	color:#4a1e00;
+	font-size:11px;
+	margin:5px 0;
+}
+
+#pwField {
+	position:relative;
+}
+
+#toPwInfo {font-size:11px; color:#8D0404; cursor:pointer;}
+
+#registerForm img {display:inline;}
+#register #pwInfo {
+	left:55px;
+	font-weight:normal;
+	padding:10px;
+	position:absolute;
+	top:-190px;
+	width:200px;
+}
+
+#pwInfo {display:none;}
+
+#register #pwInfo h3 {
+	color:#8D0404;
+	font-size:12px;
+	min-height:15px;
+	margin:0 0 5px 0;
+	height:18px;
+}
+
+#pwInfo li {
+	background:url("../img/check.gif") no-repeat scroll 0 0 transparent;
+	min-height:15px;
+	margin:0 0 5px;
+	padding:0 0 0 20px;
+}
+
+.nodisplay {
+	display: none;
+}
+/* register-box secure pwd end */
+
+/*####################################
+######## JQUERY TOOLS PLUGINS ########
+####################################*/
+
+
+.simple_overlay {
+	
+	/* must be initially hidden */
+	display:none;
+	/* place overlay on top of other elements */
+	z-index:10000;
+	/* styling */
+	background-color:#333;
+	width:675px;	
+	min-height:200px;
+	border:1px solid #666;
+	position:fixed;
+	/* CSS3 styling for latest browsers */
+	-moz-box-shadow:0 0 90px 5px #000;
+	-webkit-box-shadow: 0 0 90px #000;	
+}
+
+/* close button positioned on upper right corner */
+.overlay .close, .simple_overlay .close {
+	background: url(../img/closelabel.gif) no-repeat;
+	position:absolute;
+	right:-15px;
+	top:-15px;
+	cursor:pointer;
+	height:35px;
+	width:35px;
+}
+
+
+/* the large image. we use a gray border around it */
+#img {
+	border:1px solid #666;
+}
+
+/* "next image" and "prev image" links */
+.forward, .back, .info {background:#D8C79C;}
+
+.forward, .back {
+	
+	/* absolute positioning relative to the overlay */
+	position:absolute;
+	top:40%;	
+	border:1px solid #666;	
+	cursor:pointer;
+	display:block;
+	padding:10px 20px;
+	color:#fff;
+	height:20px;
+	font-size:11px;
+	text-indent:-9999px;
+	width:20px;
+	/* upcoming CSS3 features */
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;	
+}
+
+.back {
+	background:#D8C79C url(../img/prevlabel.gif) no-repeat center center;
+	left:0;
+	border-left:0;
+	-moz-border-radius-topleft:0;
+	-moz-border-radius-bottomleft:0;
+	-webkit-border-bottom-left-radius:0;
+	-webkit-border-top-left-radius:0;
+}
+
+.forward {
+	background:#D8C79C url(../img/nextlabel.gif) no-repeat center center;
+	right:0;
+	border-right:0;
+	-moz-border-radius-topright:0;
+	-moz-border-radius-bottomright:0;
+	-webkit-border-bottom-right-radius:0;
+	-webkit-border-top-right-radius:0;	
+}
+
+.forward:hover {background:#D8C79C url(../img/nextlabel-hover.gif) no-repeat center center;}
+.back:hover {background:#D8C79C url(../img/prevlabel-hover.gif) no-repeat center center;}
+
+/* when there is no next or previous link available this class is added */
+.disabled {
+	visibility:hidden;		
+}
+
+/* the "information box" */
+.info {
+	position:absolute;
+	bottom:0;
+	left:0;	
+	padding:10px 15px;
+	color:#160400;
+	font-size:11px;
+	border-top:1px solid #666;
+}
+
+.info strong {
+	display:block;	
+}
+
+/* progress indicator (animated gif). should be initially hidden */
+.progress {
+	position:absolute;
+	top:45%;
+	left:50%;
+	display:none;
+}
+
+#overlay {
+	display:none;
+	height:574px;
+	width:553px;
+	padding:0;
+	margin:0;
+}
+
+.contentWrap {
+	background:transparent url(../img/tb-tutorials-bg.jpg) no-repeat scroll 0 0;
+	direction:ltr;
+	height:574px;
+	width:553px;
+}
+
+/* SCROLLABLE */
+
+#tutorialScoller {
+	height:574px;
+	margin:0 auto;
+	position:relative;
+	width:553px;
+}
+
+.navi { 
+    margin-left:328px; 
+    width:200px; 
+    height:20px; 
+} 
+
+ 
+/* items inside navigator */ 
+.navi a { 
+    width:8px; 
+    height:8px; 
+    float:left; 
+    margin:3px; 
+    background:url(../img/scrollable/arrow/navigator.html) 0 0 no-repeat; 
+    display:block; 
+    font-size:1px; 
+} 
+ 
+/* mouseover state */ 
+.navi a:hover { 
+    background-position:0 -8px;       
+} 
+ 
+/* active state (current page state) */ 
+.navi a.active { 
+    background-position:0 -16px;      
+}
+
+div.scrollable { 
+ 
+    /* required settings */ 
+    position:relative; 
+    overflow:hidden; 
+	width:553px;
+    height:574px; 
+} 
+ 
+/* 
+    root element for scrollable items. Must be absolutely positioned 
+    and it should have a extremely large width to accomodate scrollable items. 
+    it's enough that you set width and height for the root element and 
+    not for this element. 
+*/ 
+div.scrollable div.items { 
+    /* this cannot be too large */ 
+    width:20000em; 
+    position:absolute; 
+	clear:both;	
+
+} 
+ 
+/* 
+    a single item. must be floated in horizontal scrolling. 
+    typically, this element is the one that *you* will style 
+    the most. 
+*/ 
+div.scrollable div.items div {
+	float:left; 
+	height:515px; 
+	width:481px;
+	padding:49px 36px 10px;
+} 
+
+div.scrollable div.items div p.pager {
+	margin:9px 0 0;
+	text-align:center;
+	color:#7B1300;
+	font-size:12px;
+	font-weight:bold;
+}
+
+
+div.scrollable div.items div p.txt {
+	margin-right:0;
+	margin-top:10px;
+	overflow-y:auto;
+	direction:ltr;
+	padding:5px;
+	height:103px;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:11px;
+}
+
+a.browse {
+	background:url(../img/prevlabel.gif) no-repeat center center;
+	cursor:pointer;
+	display:block;
+	float:left;
+	font-size:1px;
+	height:20px;
+	width:35px;
+}
+
+a.right {
+	background:url(../img/nextlabel.gif) no-repeat center center;
+	clear:right;
+	margin-right:0;
+	right:39px;
+	position:absolute;
+	top:416px;
+}
+a.right:hover {
+	background:url(../img/nextlabel-hover.gif) no-repeat center center;
+}
+
+a.left {
+	margin-left:0;
+	position:absolute;
+	left:39px;
+	top:416px;
+}
+a.left:hover {
+		background:url(../img/prevlabel-hover.gif) no-repeat center center;
+}
+
+
+/*####################################
+######## JQUERY TRANSFORMS    ########
+####################################*/
+.outtaHere {
+	position:absolute;
+	left:-3000px;
+}
+/* Selects */
+.selectArea {
+	border:1px solid #999;
+	border-color:#998153;
+	float:left;
+	font-size:11px;
+	line-height:23px;
+	padding:0px;
+	position: relative;
+}
+.selectArea .left {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:0px;
+	height:100%;
+	display: block;
+}
+.selectArea .center {
+	background: url(../img/bg_select.png) no-repeat right top;
+	color:#000;
+	height: 18px;
+	line-height:18px;
+	display:block;
+	padding:0 22px 0 4px;
+}
+.selectArea .center img {margin:1px 4px 0 0;}
+/*Selects drop-down*/
+.optionsDivInvisible,
+.optionsDivVisible {
+	background-color: #dfdfdf;
+	border: 1px solid #999;
+	display: block;
+	font-size: 11px;
+	overflow-y:auto;
+	position: absolute;
+	z-index: 30;
+}
+.optionsDivInvisible {display: none;}
+.optionsDivVisible ul {
+	list-style: none;
+	margin:0;
+	padding:2px;
+}
+.optionsDivVisible a {
+	color: #666;
+	text-decoration: none;
+	display: block;
+	height:auto;
+	padding: 0 1px;
+}
+.optionsDivVisible a img {
+	border:none;
+	margin-right:4px;
+}
+.optionsDivVisible a:hover {
+	background-color: #CCC;
+	color: #000;
+}
+/* extra class */
+.darksel {
+	border-color:#333;
+}
+.darksel .center {
+	background: #666 url(../img/bg_select_dark.html) no-repeat right top;
+}
+.darksel .center {color:#fff;}
+.darksel ul {
+	background-color: #999 !important;
+	border: 1px solid #666 !important;
+}
+.darksel a {color: #000 !important;}
+.darksel a:hover {
+	background-color: #666 !important;
+	color: #fff !important;
+}
+.selectBg {
+	background: #D3BE93 url();
+	border-color:#998153;
+}
+.selectBg .center {
+	background: #D3BE93 url(../img/distributebox-select-bg.png) no-repeat right top;
+}
+.selectBg ul li a {background: #D3BE93 url(../img/distributebox-select-bg.jpg) no-repeat 0 -20px;}
+.selectBg ul li a:hover {background: #D3BE93 url(../img/distributebox-select-bg.jpg) no-repeat 0 -40px;}
+
+
+
+/*test*/
+/*
+ * FancyBox - jQuery Plugin
+ * Simple and fancy lightbox alternative
+ *
+ * Examples and documentation at: http://fancybox.net
+ * 
+ * Copyright (c) 2008 - 2010 Janis Skarnelis
+ *
+ * Version: 1.3.1 (05/03/2010)
+ * Requires: jQuery v1.3+
+ *
+ * Dual licensed under the MIT and GPL licenses:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *   http://www.gnu.org/licenses/gpl.html
+ */
+
+#fancybox-loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	height: 40px;
+	width: 40px;
+	margin-top: -20px;
+	margin-left: -20px;
+	cursor: pointer;
+	overflow: hidden;
+	z-index: 1104;
+	display: none;
+}
+
+* html #fancybox-loading {	/* IE6 */
+	position: absolute;
+	margin-top: 0;
+}
+
+#fancybox-loading div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 480px;
+	background-image: url('../img/fancybox/fancybox.png');
+}
+
+#fancybox-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: #000;
+	z-index: 1100;
+	display: none;
+}
+
+* html #fancybox-overlay {	/* IE6 */
+	position: absolute;
+	width: 100%;
+}
+
+#fancybox-tmp {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	overflow: auto;
+	display: none;
+}
+
+#fancybox-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 20px;
+	z-index: 1101;
+	display: none;
+}
+
+#fancybox-outer {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #FFF;
+}
+
+#fancybox-inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: 0;
+	outline: none;
+	overflow: hidden;
+}
+
+#fancybox-hide-sel-frame {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+}
+
+#fancybox-close {
+	position: absolute;
+	top: -15px;
+	right: -15px;
+	width: 25px;
+	height: 25px;
+	background-image: url('../img/closelabel.gif');
+	cursor: pointer;
+	z-index: 1103;
+	display: none;
+}
+
+#fancybox_error {
+	color: #444;
+	font: normal 12px/20px Arial;
+	padding: 7px;
+	margin: 0;
+}
+
+#fancybox-content {
+	height: auto;
+	width: auto;
+	padding: 0;
+	margin: 0;
+}
+
+#fancybox-img {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	line-height: 0;
+	vertical-align: top;
+	-ms-interpolation-mode: bicubic;
+}
+
+#fancybox-frame {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border: none;
+	display: block;
+}
+
+#fancybox-title {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font-family: Arial;
+	font-size: 12px;
+	z-index: 1102;
+}
+
+.fancybox-title-inside {
+	padding: 10px 0;
+	text-align: center;
+	color: #333;
+}
+
+.fancybox-title-outside {
+	padding-top: 5px;
+	color: #FFF;
+	text-align: center;
+	font-weight: bold;
+}
+
+.fancybox-title-over {
+	color: #FFF;
+	text-align: left;
+}
+
+#fancybox-title-over {
+	padding: 10px;
+	background-image: url('../img/fancybox/fancy_title_over.png');
+	display: block;
+}
+
+#fancybox-title-wrap {
+	display: inline-block;
+}
+
+#fancybox-title-wrap span {
+	height: 32px;
+	float: left;
+}
+
+#fancybox-title-left {
+	padding-left: 15px;
+	background-image: url('../img/fancybox/fancybox.png');
+	background-position: -40px -90px;
+	background-repeat: no-repeat;
+}
+
+#fancybox-title-main {
+	font-weight: bold;
+	line-height: 29px;
+	background-image: url('../img/fancybox/fancybox-x.png');
+	background-position: 0px -40px;
+	color: #FFF;
+}
+
+#fancybox-title-right {
+	padding-left: 15px;
+	background-image: url('../img/fancybox/fancybox.png');
+	background-position: -55px -90px;
+	background-repeat: no-repeat;
+}
+
+#fancybox-left, #fancybox-right {
+	position: absolute;
+	bottom: 0px;
+	height: 100%;
+	width: 35%;
+	cursor: pointer;
+	outline: none;
+	background-image: url('../img/fancybox/blank.gif');
+	z-index: 1102;
+	display: none;
+}
+
+#fancybox-left {
+	left: 0px;
+}
+
+#fancybox-right {
+	right: 0px;
+}
+
+#fancybox-left-ico, #fancybox-right-ico {
+	position: absolute;
+	top: 50%;
+	left: -9999px;
+	width: 30px;
+	height: 30px;
+	margin-top: -15px;
+	cursor: pointer;
+	z-index: 1102;
+	display: block;
+}
+
+#fancybox-left-ico {
+	background-image: url('../img/fancybox/fancybox.png');
+	background-position: -40px -30px;
+}
+
+#fancybox-right-ico {
+	background-image: url('../img/fancybox/fancybox.png');
+	background-position: -40px -60px;
+}
+
+#fancybox-left:hover, #fancybox-right:hover {
+	visibility: visible;    /* IE6 */
+}
+
+#fancybox-left:hover span {
+	left: 20px;
+}
+
+#fancybox-right:hover span {
+	left: auto;
+	right: 20px;
+}
+
+.fancy-bg {
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	width: 20px;
+	height: 20px;
+	z-index: 1001;
+}
+
+#fancy-bg-n {
+	top: -20px;
+	left: 0;
+	width: 100%;
+	background-image: url('../img/fancybox/fancybox-x.png');
+}
+
+#fancy-bg-ne {
+	top: -20px;
+	right: -20px;
+	background-image: url('../img/fancybox/fancybox.png');
+	background-position: -40px -162px;
+}
+
+#fancy-bg-e {
+	top: 0;
+	right: -20px;
+	height: 100%;
+	background-image: url('../img/fancybox/fancybox-y.png');
+	background-position: -20px 0px;
+}
+
+#fancy-bg-se {
+	bottom: -20px;
+	right: -20px;
+	background-image: url('../img/fancybox/fancybox.png');
+	background-position: -40px -182px; 
+}
+
+#fancy-bg-s {
+	bottom: -20px;
+	left: 0;
+	width: 100%;
+	background-image: url('../img/fancybox/fancybox-x.png');
+	background-position: 0px -20px;
+}
+
+#fancy-bg-sw {
+	bottom: -20px;
+	left: -20px;
+	background-image: url('../img/fancybox/fancybox.png');
+	background-position: -40px -142px;
+}
+
+#fancy-bg-w {
+	top: 0;
+	left: -20px;
+	height: 100%;
+	background-image: url('../img/fancybox/fancybox-y.png');
+}
+
+#fancy-bg-nw {
+	top: -20px;
+	left: -20px;
+	background-image: url('../img/fancybox/fancybox.png');
+	background-position: -40px -122px;
+}
+
+/* IE */
+
+#fancybox-loading.fancybox-ie div	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_loading.png', sizingMethod='scale'); }
+
+.fancybox-ie #fancybox-title-over	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_title_over.png', sizingMethod='scale'); zoom: 1; }
+.fancybox-ie #fancybox-title-left	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_title_left.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-title-main	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_title_main.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-title-right	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_title_right.png', sizingMethod='scale'); }
+
+.fancybox-ie #fancybox-left-ico		{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_nav_left.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-right-ico	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_nav_right.png', sizingMethod='scale'); }
+
+.fancybox-ie .fancy-bg { background: transparent !important; }
+
+.fancybox-ie #fancy-bg-n	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_shadow_n.png', sizingMethod='scale'); }
+.fancybox-ie #fancy-bg-ne	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_shadow_ne.png', sizingMethod='scale'); }
+.fancybox-ie #fancy-bg-e	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_shadow_e.png', sizingMethod='scale'); }
+.fancybox-ie #fancy-bg-se	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_shadow_se.png', sizingMethod='scale'); }
+.fancybox-ie #fancy-bg-s	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_shadow_s.png', sizingMethod='scale'); }
+.fancybox-ie #fancy-bg-sw	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_shadow_sw.png', sizingMethod='scale'); }
+.fancybox-ie #fancy-bg-w	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_shadow_w.png', sizingMethod='scale'); }
+.fancybox-ie #fancy-bg-nw	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/fancybox/fancy_shadow_nw.png', sizingMethod='scale'); }
