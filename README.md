@@ -1,6 +1,6 @@
-# irisPanel — Web Clasic & iShop Clasic
+# irisPanel — Web Clasic
 
-PHP tabanlı **Metin2 oyun sunucusu** web sitesi ve item shop sistemi.  
+PHP tabanlı **Metin2 oyun sunucusu** web sitesi sistemi.  
 [irisPanel](https://irispanel.com) altyapısı ile çalışır; tüm veri işlemleri SQL'e doğrudan bağlantı olmadan merkezi bir **REST API** üzerinden yürütülür.
 
 ---
@@ -25,7 +25,6 @@ PHP tabanlı **Metin2 oyun sunucusu** web sitesi ve item shop sistemi.
 | Proje | Açıklama |
 |---|---|
 | **Web_Clasic** | Oyun portalı — sıralama, haberler, istatistikler, hesap yönetimi, rehberler |
-| **iShop_Clasic** | Item shop — kategori/ürün/paket satışı, epin, kupon, ödeme entegrasyonu |
 
 Her iki proje de bağımsız olarak çalışabilir; aynı irisPanel API sunucusunu paylaşır.
 
